@@ -51,4 +51,24 @@ def print_loop(end_num):
     # recursive case that drives state towards the base case
     print_loop(end_num - 1)
 
-print_loop(20)
+
+# # setting a higher recursion limit (994 is default max -- 995 crashes)
+# import sys
+# sys.setrecursionlimit(5000)
+# # this will allow you to loop 5 times less than limit -- in this case 4994!
+
+# print_loop(20)
+
+
+
+# accept a value n and compute the sum of numbers from 0 to n
+def sum_to(n):
+    # base case
+    if n <= 0:
+        return 0
+    # recursive case
+    print(f'n is currently: {n}')
+    return n + sum_to(n - 1)
+
+print(sum_to(10)) # (10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1)
+
