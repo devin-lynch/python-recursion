@@ -36,4 +36,19 @@ def recursive_loop(end_num, current_num = 0):
     # recursive case
     return recursive_loop(end_num, current_num + 1) # drives state towards the base case!
 
-recursive_loop(20)
+# recursive_loop(20)
+
+
+# manage state by modifying input value given
+def print_loop(end_num):
+    # base case -- end_num is less than zero
+    if end_num < 0:
+        return
+
+    #function logic
+    print('current number is:', end_num)
+
+    # recursive case that drives state towards the base case
+    print_loop(end_num - 1)
+
+print_loop(20)
